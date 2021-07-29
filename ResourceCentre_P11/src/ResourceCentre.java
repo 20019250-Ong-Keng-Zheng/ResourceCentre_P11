@@ -3,9 +3,7 @@ import java.util.ArrayList;
 public class ResourceCentre {
 
 
-	/**
-	 * 
-	 */
+
 	private static final int OPTION_QUIT = 5;
 	public static void main(String[] args) {
 
@@ -32,7 +30,10 @@ public class ResourceCentre {
 			} else if (option == 2) {
 				// Add a new item
 				ResourceCentre.setHeader("ADD");			
-				itemTypeMenu();
+
+
+				itemType_menu();
+
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
@@ -53,7 +54,9 @@ public class ResourceCentre {
 			} else if (option == 3) {
 				// Loan item
 				ResourceCentre.setHeader("LOAN");			
-				itemTypeMenu();
+
+				itemType_menu();
+
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
@@ -70,7 +73,9 @@ public class ResourceCentre {
 			} else if (option == 4) {
 				// Return item
 				ResourceCentre.setHeader("RETURN");				
-				itemTypeMenu();
+
+				itemType_menu();
+
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 				if (itemType == 1) {
@@ -93,7 +98,9 @@ public class ResourceCentre {
 
 	}
 
-	public static void itemTypeMenu() {
+
+	public static void itemType_menu() {
+
 		ResourceCentre.setHeader("ITEM TYPES");
 		System.out.println("1. Camcorder");
 		System.out.println("2. Chromebook");
